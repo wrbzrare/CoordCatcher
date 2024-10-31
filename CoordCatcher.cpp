@@ -13,12 +13,12 @@ int main() {
     for (int y = 0; y < image.height(); y += 10) {
         image.draw_line(0, y, image.width() + 1, y, black_color);
     }
-    CImgDisplay display(image, "Координатная сетка");
+    CImgDisplay display(image, "РљРѕРѕСЂРґРёРЅР°С‚РЅР°СЏ СЃРµС‚РєР°");
     while (!display.is_closed()) {
         if (display.button()) {
             int x = display.mouse_x();
             int y = display.mouse_y();
-            std::cout << "Координаты: x = " << x << ", y = " << y << std::endl;
+            std::cout << "РљРѕРѕСЂРґРёРЅР°С‚С‹: x = " << x << ", y = " << y << std::endl;
         }
         display.wait();
     }
